@@ -12,14 +12,9 @@ class Solution:
             "D": 500,
             "M": 1000,
         }
-        # if len(s) == 1:
-        #     return roman_dict[s]
-        # else:
-        #     for letter in s:
-        #         result += roman_dict[letter]
         j = len(s)
         for i in range(len(s)):
-            if i < (j - 1) and roman_dict[s[i]] > roman_dict[s[i+1]]:
+            if i < (j - 1) and roman_dict[s[i]] < roman_dict[s[i+1]]:
                 result += -1 * roman_dict[s[i]]
             else:
                 result += roman_dict[s[i]]
@@ -27,8 +22,12 @@ class Solution:
 
 
 # test
-f = "III"
+a = "III"
+b = "MCMXCIV"
+s = "LVIII"
 d = Solution()
 
 
-print(d.roman_to_int(f))
+print(d.roman_to_int(a))
+print(d.roman_to_int(b))
+print(d.roman_to_int(s))
