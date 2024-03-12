@@ -1,7 +1,7 @@
 class Solution:
 
     @staticmethod
-    def roman_to_int(s: str) -> int:
+    def RomanToDict(s: str) -> int:
         result = 0
         roman_dict = {
             "I": 1,
@@ -28,6 +28,6 @@ s = "LVIII"
 d = Solution()
 
 
-print(d.roman_to_int(a))
-print(d.roman_to_int(b))
-print(d.roman_to_int(s))
+print(d.RomanToDict(a))
+print(d.RomanToDict(b))
+print(d.RomanToDict(s))
